@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Personal News Aggregator</title>
+    <link rel="stylesheet" type="text/css" href="/news_ag.css">
+  </head>
+
+  <body>
+    <h1>Your Saved Articles</h1>
+      <% @article_list.each do |row| %>
+        <ul>
+          <li><a href="/articles/<%=row[0]%>"><%= row[0] %> </a>
+            <ul style="list-style-type:square">
+              <li><u>URL:</u>  <%= row[1] %></li>
+              <li><u>Description:</u>  <%= row[2] %></li>
+            </ul>
+          </li>
+        </ul>
+      <%end%>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Personal News Aggregator</title>
+    <link rel="stylesheet" type="text/css" href="/news_ag.css">
+  </head>
+
+  <body>
+    <h1><% @article_list.each do |row| %>
+        <% if row[0] == @article_title%></h1>
+          <h2><em><%= @article_title %></em></h2>
+          <h2><u>URL:</u> <%= row[1] %></h2>
+          <h2><u>Description:</u> <%= row[2] %></h2>
+        <%end%>
+      <%end%>
+    </h1>
+  </body>
+</html>
